@@ -35,46 +35,46 @@
 
 // Your task is to iterate over the array of uncookedFood and invoke the function for each item so that the cookedFood array contains all of the items after they are cooked.
 
-// const hamburger = {
-// 	name: 'Hamburger',
-// 	type: 'beef',
-// 	cooked: false,
-// }
-// const zucchini = {
-// 	name: 'Zucchini',
-// 	type: 'vegetable',
-// 	cooked: false,
-// }
-// const chickenBreast = {
-// 	name: 'Chicken Breast',
-// 	type: 'chicken',
-// 	cooked: false,
-// }
-// const corn = {
-// 	name: 'Corn',
-// 	type: 'vegetable',
-// 	cooked: false,
-// }
-// const steak = {
-// 	name: 'Steak',
-// 	type: 'beef',
-// 	cooked: false,
-// }
+const hamburger = {
+	name: 'Hamburger',
+	type: 'beef',
+	cooked: false,
+}
+const zucchini = {
+	name: 'Zucchini',
+	type: 'vegetable',
+	cooked: false,
+}
+const chickenBreast = {
+	name: 'Chicken Breast',
+	type: 'chicken',
+	cooked: false,
+}
+const corn = {
+	name: 'Corn',
+	type: 'vegetable',
+	cooked: false,
+}
+const steak = {
+	name: 'Steak',
+	type: 'beef',
+	cooked: false,
+}
 
-// const uncookedFood = [hamburger, zucchini, chickenBreast, corn, steak];
+const uncookedFood = [hamburger, zucchini, chickenBreast, corn, steak];
 
-// const cookedFood = [];
+const cookedFood = [];
 
-// function grill2 (i) {
-//   i.cooked = true;
-//   cookedFood.push(i);
-//   for (var j = 0; j <= uncookedFood.length; j++) {
-//     if (uncookedFood[j] === i)
-//       uncookedFood.splice(i,1);
-//     }
-//   }
+function grill (food) {
+  food.cooked = true;
+  cookedFood.push(food);
+  for (var i = 0; i <= uncookedFood.length; i++) {
+    if (uncookedFood[i] === food)
+      uncookedFood.splice(food,1);
+    }
+  }
 
-// grill2(hamburger);
+// grill(hamburger);
 
 
 // Practice: Stacking Words
@@ -88,15 +88,15 @@ let sentence = ["The", "walrus", "danced", "through", "the", "trees", "in", "the
     and output the words to the browser console.
 */
 
-// function addExcitement(theWordArray) {
-//   let buildMeUp = ""   // Each time the for loop executes, you're going to add one more word to this string
-//   for (let i = 0; i < theWordArray.length; i++) {
-//     buildMeUp += `${theWordArray[i]} `;          // Concatenate the new word onto buildMeUp
-//     console.log(buildMeUp);          // Print buildMeUp to the console
-//   }
-// }
+function addExcitement(theWordArray) {
+  let buildMeUp = ""   // Each time the for loop executes, you're going to add one more word to this string
+  for (let i = 0; i < theWordArray.length; i++) {
+    buildMeUp += `${theWordArray[i]} `;          // Concatenate the new word onto buildMeUp
+    console.log(buildMeUp);          // Print buildMeUp to the console
+  }
+}
 
-// addExcitement(sentence);
+addExcitement(sentence);
 
 // Practice: Some words are more exciting than others
 
@@ -138,19 +138,19 @@ let sentence = ["The", "walrus", "danced", "through", "the", "trees", "in", "the
 
 // Challenge: Arrow Functions
 
-let addExcitement = (theWordArray, j) => {
-  let buildMeUp = "" ;
-  for (let i = 0; i < theWordArray.length; i++) {
-    if (i === 0) {
-      buildMeUp += `${theWordArray[i]} `;      
-      console.log(buildMeUp);
-    } else if (i % 3 == 0) {
-    buildMeUp += `${theWordArray[i]}${j} `;          
-    console.log(buildMeUp);          
-    }
-    else {
-      buildMeUp += `${theWordArray[i]} `;      
-      console.log(buildMeUp);
-    }
-  }
-}
+// let addExcitement = (theWordArray, j) => {
+//   let buildMeUp = "" ;
+//   for (let i = 0; i < theWordArray.length; i++) {
+//     if (i === 0) {
+//       buildMeUp += `${theWordArray[i]} `;      
+//       console.log(buildMeUp);
+//     } else if (i % 3 == 0) {
+//     buildMeUp += `${theWordArray[i]}${j} `;          
+//     console.log(buildMeUp);          
+//     }
+//     else {
+//       buildMeUp += `${theWordArray[i]} `;      
+//       console.log(buildMeUp);
+//     }
+//   }
+// }
